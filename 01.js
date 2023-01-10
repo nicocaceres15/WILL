@@ -12,12 +12,19 @@ function soloNumeros(array) {
 
   // Tu código aca:
   let nuevoArray = [];
-  for (var i = 0; i < array.length; i++){
-    if (array[i] > 0){
-      nuevoArray.push(array[i])
+ for (var i = 0; i < array.length; i++){
+  if (typeof  array[i] === "number"){
+     nuevoArray.push(array[i])
     }
   }
   return nuevoArray;
+
+//for (var soloNumero of array){
+ //  if (typeof soloNumero === "number"){
+    //   nuevoArray.push(soloNumero)
+ // }
+//}
+//return nuevoArray;
 }
 
 // No modifiques nada debajo de esta linea //
