@@ -24,8 +24,30 @@ function filtrar(funcion) {
   // productos.filtrar(function(p) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
+   //let productos1 = [];
+   //for (var prop of funcion ){
+    //if (prop.hasOwnProperty(price) && prop.price> 50){
+     // productos1.push(prop)
+     //return true;
+   // }else {
+    //  return false;
+   // }
 
-};
+   //}
+   //return productos1;
+ Array.prototype.filtrar = function(funcion){
+  var nuevoArray = [];
+  for(let i = 0; i < this.length; i++){
+    if (funcion(this[i]) ){
+    nuevoArray.push(this[i])
+    }
+  
+ }  
+ return nuevoArray;
+
+}
+
+}
 
 // No modifiques nada debajo de esta linea //
 
