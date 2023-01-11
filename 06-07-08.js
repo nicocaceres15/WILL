@@ -11,8 +11,13 @@ function crearClasePersona() {
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
       // Tu código aca:
+       this.nombre = nombre;
+       this.edad = edad;
+       this.hobbies = hobbies;
+       this.amigos = amigos
 
-    }
+    } 
+       personas = new amigo ( nombre,edad,hobbies,amigos);
 
     addFriend(nombre, edad) {
       // El método 'addFriend' recibe un string 'nombre' y un entero 'edad' y debe agregar un objeto:
@@ -20,14 +25,22 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
-
-    }
+      //Object.prototype.addFriend = function(nombre,edad){
+        var objeto = {
+           nombre:nombre,
+           edad: edad
+        }
+        amigos.push(objeto);
+      }
+       
 
     addHobby(hobby) {
       // El método 'addHobby' recibe un string 'hobby' y debe agregarlo al arreglo de hobbies de la persona.
       // No debe retornar nada.
 
       // Tu código aca:
+      this.hobbies.push(hobby);
+
 
     }
     getFriends() {
@@ -38,7 +51,10 @@ function crearClasePersona() {
       // persona.getFriends() debería devolver ['martin', 'toni']
 
       // Tu código aca:
-
+    
+       var agregar = array.map(function(nombre){
+         return agregar.push(nombre)
+       })
     }
 
     getHobbies() {
@@ -47,6 +63,9 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
+       var personaHobbies = array.map(function(hobbies){
+           return personaHobbies.push(hobbies)
+       })
 
     }
 
