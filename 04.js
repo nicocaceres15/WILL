@@ -13,8 +13,32 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+ // var numToString = num.ToString()
+//var numero = numToString.split("")
+//for (let i = 0; i < numero.length ; i++) {
+  //var numString = numAlReves[i].split("");
+  //var alReves = numero[i].reverse();
+  //numero[i] = alReves.join("");
+  //numero.join("")
+  //if (numero[i] === numToString){
+  //  return true;
+ // }else {
+ //   return false;
+//  }
+//}
+let numString = num.toString()
+let stringConvertido = numString.split("")
+let stringAlReves = stringConvertido.reverse()
+let string = stringAlReves.join("")
+  if (numString === string){
+    return true;
+  }else {
+    return false;
+  }
 }
+
+
+
 
 // No modifiques nada debajo de esta linea //
 
