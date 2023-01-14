@@ -16,8 +16,9 @@ function crearClasePersona() {
        this.hobbies = hobbies;
        this.amigos = amigos
 
-    } 
-       personas = new amigo ( nombre,edad,hobbies,amigos);
+        }
+    
+        
 
     addFriend(nombre, edad) {
       // El método 'addFriend' recibe un string 'nombre' y un entero 'edad' y debe agregar un objeto:
@@ -26,12 +27,14 @@ function crearClasePersona() {
 
       // Tu código aca:
       //Object.prototype.addFriend = function(nombre,edad){
-        var objeto = {
-           nombre:nombre,
-           edad: edad
-        }
-        amigos.push(objeto);
+       // var objeto = {
+        //   nombre:nombre,
+       //    edad: edad,
+       // }
+       this.amigos.push({nombre: nombre, edad: edad});
       }
+       
+      
        
 
     addHobby(hobby) {
@@ -39,7 +42,7 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
-      this.hobbies.push(hobby);
+     this.hobbies.push(hobby);
 
 
     }
@@ -52,9 +55,12 @@ function crearClasePersona() {
 
       // Tu código aca:
     
-       var agregar = array.map(function(nombre){
-         return agregar.push(nombre)
-       })
+        var  personaAmigos = this.amigos.map(function(nombre){
+           return nombre.nombre;
+        })
+           
+      return personaAmigos;
+       
     }
 
     getHobbies() {
@@ -63,15 +69,16 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
-       var personaHobbies = array.map(function(hobbies){
-           return personaHobbies.push(hobbies)
+       var personaHobbies =this.hobbies.map(function(hobby){
+             return hobby;
+        
        })
-
+       return personaHobbies;
     }
 
     getPromedioEdad() {
       // El método 'getPromedioEdad' debe retornar el promedio de edad de los amigos de una persona
-      // Ej:
+      // Ej:S
       // Si la persona tuviera estos amigos:
       // {
       //   amigos: [{
@@ -84,9 +91,15 @@ function crearClasePersona() {
       // }
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
-      // Tu código aca:
-
+      // Tu código aca: 
+      let suma = 0;
+      for ( var promedio of this.amigos) {
+          suma += promedio["edad"] 
+        }
+      
+       return suma /  this.amigos.length;
     }
+     
   };
 
   return Persona;

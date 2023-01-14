@@ -35,18 +35,18 @@ function filtrar(funcion) {
 
    //}
    //return productos1;
- Array.prototype.filtrar = function(funcion){
-  var nuevoArray = [];
-  for(let i = 0; i < this.length; i++){
-    if (funcion(this[i]) ){
-    nuevoArray.push(this[i])
-    }
+   Array.prototype.filtrar = function(funcion){
+    var nuevoArray = [];
+    for(let i = 0; i < this.length; i++){
+      if (funcion(this[i]) ){
+      nuevoArray.push(this[i])
+      }
+    
+   }  
+   return nuevoArray;
   
- }  
- return nuevoArray;
-
-}
-
+  }
+  
 }
 
 // No modifiques nada debajo de esta linea //
